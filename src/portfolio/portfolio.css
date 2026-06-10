@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap');
+
+/* Scoped portfolio styles — only apply inside .portfolio-root */
+.portfolio-root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  background-image: url('./assets/bg-texture.png');
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.portfolio-root * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.portfolio-root .container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+.portfolio-root h1,
+.portfolio-root h2,
+.portfolio-root h3,
+.portfolio-root h4,
+.portfolio-root h5,
+.portfolio-root h6 {
+  font-weight: 500;
+}
+
+.portfolio-root h1 {
+  font-size: 2.5rem;
+}
+
+.portfolio-root section {
+  margin-top: 8rem;
+}
+
+.portfolio-root section > h2,
+.portfolio-root section > h5 {
+  color: var(--color-light);
+  text-align: center;
+}
+
+.portfolio-root section > h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.portfolio-root .text-light {
+  color: var(--color-primary);
+}
+
+.portfolio-root a {
+  transition: var(--transition);
+  color: var(--color-primary);
+}
+
+.portfolio-root a:hover {
+  color: var(--color-white);
+}
+
+.portfolio-root .btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+  background: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.portfolio-root .btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.portfolio-root .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.portfolio-root img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio-root .container {
+    width: var(--container-width-md);
+  }
+  .portfolio-root section {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio-root .container {
+    width: var(--container-width-sm);
+  }
+  .portfolio-root section > h2 {
+    margin-bottom: 2rem;
+  }
+}

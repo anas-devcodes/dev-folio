@@ -1,0 +1,129 @@
+.education__container {
+  max-width: 950px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+.education__card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  padding: 1.8rem 1.6rem;
+  display: flex;
+  gap: 1.1rem;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: eduFadeIn 600ms ease forwards;
+}
+
+@keyframes eduFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.education__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  transform: translateY(-4px);
+}
+
+.education__icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.85rem;
+  background: rgba(77, 181, 255, 0.12);
+  color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+
+.education__card:hover .education__icon {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.education__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.education__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.education__head h3 {
+  color: var(--color-white);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.education__duration {
+  font-size: 0.78rem;
+  color: var(--color-light);
+  background: rgba(77, 181, 255, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-primary-variant);
+  white-space: nowrap;
+}
+
+.education__institution {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 0.4rem 0 0.8rem;
+  font-size: 0.92rem;
+}
+
+.education__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.education__highlights li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--color-light);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.education__highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .education__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .education__card {
+    padding: 1.4rem 1.1rem;
+    flex-direction: column;
+  }
+  .education__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.2rem;
+  }
+}

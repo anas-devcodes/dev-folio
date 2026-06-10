@@ -1,0 +1,96 @@
+.portfolio-root .container.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 12%;
+}
+
+.portfolio-root .contact__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.portfolio-root .contact__option {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.portfolio-root .contact__option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+.portfolio-root .contact__option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-root .contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.portfolio-root .contact__option h5 {
+  color: var(--color-light);
+}
+
+.portfolio-root .contact__option h4 {
+  font-weight: 500;
+}
+
+.portfolio-root form span {
+  font-size: 0.85rem;
+  color: var(--color-light);
+}
+
+.portfolio-root form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.portfolio-root form input,
+.portfolio-root form textarea {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 0.6rem;
+  background: rgba(77, 181, 255, 0.04);
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-white);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.portfolio-root form input::placeholder,
+.portfolio-root form textarea::placeholder {
+  color: var(--color-light);
+}
+
+.portfolio-root form input:focus,
+.portfolio-root form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(77, 181, 255, 0.08);
+}
+
+@media screen and (min-width: 601px) {
+  .portfolio-root .container.contact__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio-root .container.contact__container {
+    width: var(--container-width-sm);
+  }
+}

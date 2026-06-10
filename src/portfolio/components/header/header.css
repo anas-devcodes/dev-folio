@@ -1,0 +1,89 @@
+.portfolio-root header {
+  min-height: 100vh;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-root .header__container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio-root .header__container > h1 {
+  background: linear-gradient(120deg, #fff 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5rem 0;
+}
+
+.portfolio-root .cta {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.portfolio-root .header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.portfolio-root .header__socials::after {
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+.portfolio-root .scroll__down {
+  position: absolute;
+  right: 1rem;
+  bottom: 6rem;
+  transform: rotate(90deg);
+  transform-origin: right;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 1025px) {
+  .portfolio-root .header__socials {
+    left: 5rem;
+    bottom: 4rem;
+  }
+  .portfolio-root .scroll__down {
+    right: 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio-root header {
+    min-height: 80vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio-root header {
+    min-height: 90vh;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  .portfolio-root .header__socials,
+  .portfolio-root .scroll__down {
+    display: none;
+  }
+}
